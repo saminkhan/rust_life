@@ -1,6 +1,7 @@
 # first_rust
 
 Requirements:
+
 cargo and npm must be installed.
 
 To launch the wasm-server:
