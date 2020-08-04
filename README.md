@@ -2,7 +2,7 @@
 
 Requirements:
 
-cargo, npm, python3, and wasm-pack must be installed.
+cargo, npm, and python3 must be installed.
 
 To build and launch the FirstRust app:
 
