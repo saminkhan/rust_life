@@ -1,12 +1,19 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const APP_NAME = 'FirstRust';
+
 module.exports = {
     mode: 'development',
-    entry: './index.js',
+    entry: './frontend/index.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
+        publicPath: 'static/',
     },
-    plugins: [new HtmlWebpackPlugin({ title: 'FirstRust' })],
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: APP_NAME,
+            filename: APP_NAME + '.jinja2',
+        }),
+    ],
 };

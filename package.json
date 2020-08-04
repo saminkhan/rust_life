@@ -2,11 +2,16 @@
   "name": "first_rust",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "frontend/index.js",
   "scripts": {
-    "all": "npm i; npm run rust; npm run webpack",
-    "rust": "wasm-pack build",
-    "webpack": "node_modules/.bin/webpack"
+    "all": "npm run make; npm run deploy",
+    "build": "npm run rust; webpack --config webpack.config.js",
+    "deploy": "rm -rf deploy; mkdir deploy; npm run venv; bash setup.sh",
+    "install": "npip install -r requirements.txt",
+    "make": "npm i -f --no-package-lock --no-shrinkwrap; npm run build",
+    "nopy": "nopy",
+    "rust": "wasm-pack build -d frontend/pkg",
+    "venv": "nopy -m venv --copies deploy/py_venv"
   },
   "repository": {
     "type": "git",
@@ -20,8 +25,11 @@
   "homepage": "https://github.com/saminkhan/first_rust#readme",
   "devDependencies": {
     "html-webpack-plugin": "^3.2.0",
-    "wasm-server": "0.0.4",
+    "nopy": "^0.2.7",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11"
+  },
+  "python": {
+    "execPath": "python3"
   }
 }

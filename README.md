@@ -1,16 +1,18 @@
-# first_rust
+# FirstRust
 
 Requirements:
 
-cargo, wasm-pack and npm must be installed.
+cargo, npm, python3, and wasm-pack must be installed.
 
-To build and launch the wasm-server:
+To build and launch the FirstRust app:
 
 1. npm run all
-2. cd dist; ../node_modules/.bin/wasm-server
+2. cd deploy
+3. ./run.py
 
-Use a competent browser to navigate to 127.0.0.1:3000.
-This shows nothing on-screen. Open up developer tools.
+Use a competent browser to navigate to the ip:port address indicated.
+By default, a tab-less Chrome window will attempt to launch.
+The page does not show anything on-screen. Open up developer tools (F12).
 In the console, enter:
 timer(wasm_fib, 35)
 

@@ -1,9 +1,12 @@
-target/
-dist/
-package/
+*lock*
+*_modules
 
+*.log*
 
-#Added by cargo
+target
+frontend/pkg
+dist
+deploy
 
-/target
-Cargo.lock
+!*.gitignore
+!*README.md

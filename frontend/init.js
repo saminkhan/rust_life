@@ -7,8 +7,8 @@ window.js_fib = (n) => {
 };
 
 window.timer = (func, n) => {
-    let delta = new Date().getTime();
+    console.time();
     const result = func(n);
-    delta = (new Date().getTime() - delta) / 1000.0;
-    return [delta, result];
+    console.timeEnd();
+    return result;
 };
