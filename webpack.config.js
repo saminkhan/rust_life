@@ -20,7 +20,7 @@ module.exports = {
             crateDirectory: path.resolve(__dirname, 'frontend/rust'),
             extraArgs: '--no-typescript',
             forceMode: 'production',
-            outDir: '../pkg',
+            outDir: path.resolve(__dirname, 'frontend/pkg'),
         }),
     ],
 };
