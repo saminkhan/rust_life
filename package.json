@@ -6,6 +6,7 @@
   "scripts": {
     "all": "npm run make; npm run deploy",
     "build": "webpack --config webpack.config.js",
+    "clean": "bash clean.sh",
     "deploy": "rm -rf deploy; mkdir deploy; npm run venv; bash setup.sh",
     "install": "npip install -r requirements.txt",
     "make": "npm i -f --no-package-lock --no-shrinkwrap; npm run build",

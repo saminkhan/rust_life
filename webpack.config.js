@@ -19,6 +19,7 @@ module.exports = {
         new WasmPackPlugin({
             crateDirectory: path.resolve(__dirname, 'frontend/rust'),
             extraArgs: '--no-typescript',
+            forceMode: 'production',
             outDir: '../pkg',
         }),
     ],
