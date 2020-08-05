@@ -1,0 +1,45 @@
+{
+    "root": true,
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": ["plugin:react/recommended", "airbnb", "prettier"],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly",
+        "_": true,
+        "$": true,
+        "React": true,
+        "ReactDOM": true,
+        "localforage": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": ["prettier", "react"],
+    "rules": {
+        "max-classes-per-file": "off",
+        "no-alert": "off",
+        "no-console": "off",
+        "no-empty": "off",
+        "no-labels": "off",
+        "no-param-reassign": "warn",
+        "no-plusplus": "off",
+        "no-restricted-syntax": ["error", "ForInStatement", "WithStatement"],
+        "no-template-curly-in-string": "off",
+        "no-unused-vars": "warn",
+        "prefer-destructuring": "off",
+        "prettier/prettier": "error",
+        "react/destructuring-assignment": "off",
+        "react/no-unused-state": "warn",
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
+        "react/prop-types": "off"
+    }
+}

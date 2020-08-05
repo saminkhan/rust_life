@@ -6,7 +6,7 @@ cargo, npm, and python3 must be installed.
 
 To build and launch the FirstRust app locally:
 
-1. npm run pkg
+1. ENV=prod npm run pkg
 2. cd pkg
 3. ./run.py
 

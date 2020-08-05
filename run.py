@@ -79,7 +79,7 @@ def main():
     serve(TransLogger(app, setup_console_handler=False), host=HOST, port=PORT)
 
 
-def parse_args():
+def parse_args() -> dict:
     arg_parser = ArgumentParser(
         description='a Python-Pyramid web server for {}'.format(APP_NAME))
     arg_parser.add_argument('-e', '--env', default='', required=False,

@@ -3,9 +3,10 @@
 
 *.log*
 
-target
-pkg
+browser_data
 dist
+pkg
+target
 
 !*.gitignore
 !*README.md

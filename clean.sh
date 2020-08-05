@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-rm -rf dist pkg *_modules *lock*
+rm -rf browser_data dist pkg *_modules *lock* *.log*
 
 pushd backend
 rm -rf __pycache__
