@@ -9,12 +9,10 @@ module.exports = {
     entry: './frontend/index.js',
     output: {
         filename: 'bundle.js',
-        publicPath: 'static/',
     },
     plugins: [
         new HtmlWebpackPlugin({
             title: APP_NAME,
-            filename: APP_NAME + '.jinja2',
         }),
         new WasmPackPlugin({
             crateDirectory: path.resolve(__dirname, 'frontend/rust'),

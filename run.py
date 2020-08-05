@@ -38,10 +38,11 @@ def main():
 
     with Configurator() as config:
         config.include('pyramid_jinja2')
+        config.add_jinja2_renderer('.html')
         config.add_route('index', '/')
         for i in []:    # placeholder for route handles
             config.add_route(i, '/' + i)
-        config.add_static_view(name='static', path='dist')
+        config.add_static_view(name='', path='dist')
         config.scan('backend')
         app = config.make_wsgi_app()
 

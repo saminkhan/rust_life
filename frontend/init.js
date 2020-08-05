@@ -1,14 +1,39 @@
 import * as wasm from './pkg';
 
-window.wasm_fib = wasm.fib;
+const DEFAULT = 30;
+
+window.rs_fib = wasm.fib;
 
 window.js_fib = (n) => {
     return n < 2 ? n : window.js_fib(n - 1) + window.js_fib(n - 2);
 };
 
-window.timer = (func, n) => {
-    console.time();
-    const result = func(n);
-    console.timeEnd();
-    return result;
+window.timer = async (func, n) => {
+    const t1 = new Date().getTime();
+    const result = await func(n);
+    return [((new Date().getTime() - t1) / 1000).toFixed(3), result];
 };
+
+let main_loop = async () => {
+    let x = DEFAULT;
+    while (true) {
+        const input = prompt(
+            'fib(n) benchmark (JavaScript vs Rust+Wasm); enter n:',
+            x.toString()
+        );
+        x = Math.max(0, parseInt(input, 10));
+        x = isNaN(x) ? DEFAULT : x;
+
+        const y = await Promise.all([
+            window.timer(window.js_fib, x),
+            window.timer(window.rs_fib, x),
+        ]);
+
+        alert(
+            `JavaScript:    fib(${x}) == ${y[0][1]} (${y[0][0]} seconds)\n` +
+                `Rust+Wasm:    fib(${x}) == ${y[1][1]} (${y[1][0]} seconds)`
+        );
+    }
+};
+
+main_loop();

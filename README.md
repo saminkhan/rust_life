@@ -4,19 +4,14 @@ Requirements:
 
 cargo, npm, and python3 must be installed.
 
-To build and launch the FirstRust app:
+To build and launch the FirstRust app locally:
 
-1. npm run all
-2. cd deploy
+1. npm run pkg
+2. cd pkg
 3. ./run.py
 
 Use a competent browser to navigate to the ip:port address indicated.
 By default, a tab-less Chrome window will attempt to launch.
-The page does not show anything on-screen. Open up developer tools (F12).
-In the console, enter:
-timer(wasm_fib, 35)
+The page will prompt for n, in order to benchmark fib(n) in JavaScript and Rust+Wasm.
 
-The above will time the rust+wasm Fibonacci implementation.
-
-To time the JS implementation, enter:
-timer(js_fib, 35)
+WARNING: n >= 45 will take several minutes to calculate.

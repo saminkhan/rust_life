@@ -6,7 +6,6 @@
 target
 pkg
 dist
-deploy
 
 !*.gitignore
 !*README.md

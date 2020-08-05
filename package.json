@@ -4,15 +4,16 @@
   "description": "",
   "main": "frontend/index.js",
   "scripts": {
-    "all": "npm run make; npm run deploy",
+    "prebuild": "npm i -f --no-package-lock --no-shrinkwrap",
     "build": "webpack --config webpack.config.js",
     "clean": "bash clean.sh",
-    "deploy": "rm -rf deploy; mkdir deploy; npm run venv; bash setup.sh",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "install": "npip install -r requirements.txt",
-    "make": "npm i -f --no-package-lock --no-shrinkwrap; npm run build",
-    "nopy": "nopy",
-    "venv": "nopy -m venv --copies deploy/py_venv",
-    "wasm-pack": "wasm-pack"
+    "prepkg": "npm run build; rm -rf pkg; npm run venv",
+    "pkg": "bash setup.sh",
+    "venv": "nopy -m venv --copies pkg/py_venv",
+    "gh": "gh-pages"
   },
   "repository": {
     "type": "git",
@@ -20,12 +21,14 @@
   },
   "author": "Samin Khan",
   "license": "MIT",
+  "private": true,
   "bugs": {
     "url": "https://github.com/saminkhan/first_rust/issues"
   },
   "homepage": "https://github.com/saminkhan/first_rust#readme",
   "devDependencies": {
     "@wasm-tool/wasm-pack-plugin": "^1.3.1",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^3.2.0",
     "nopy": "^0.2.7",
     "wasm-pack": "^0.9.1",

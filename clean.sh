@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-rm -rf deploy dist *_modules *lock*
+rm -rf dist pkg *_modules *lock*
 
 pushd backend
 rm -rf __pycache__
