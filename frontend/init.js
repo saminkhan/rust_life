@@ -18,7 +18,8 @@ let main_loop = async () => {
     let x = DEFAULT;
     while (true) {
         const input = prompt(
-            'fib(n) benchmark (JavaScript vs Rust+Wasm); enter n:',
+            'JavaScript vs Rust+Wasm benchmark using fibonacci(n)\n\n' +
+                'enter n (may need more than a minute for n >= 45):',
             x.toString()
         );
         x = Math.max(0, parseInt(input, 10));
@@ -30,8 +31,8 @@ let main_loop = async () => {
         ]);
 
         alert(
-            `JavaScript:    fib(${x}) == ${y[0][1]} (${y[0][0]} seconds)\n` +
-                `Rust+Wasm:    fib(${x}) == ${y[1][1]} (${y[1][0]} seconds)`
+            `JavaScript: fibonacci(${x}) == ${y[0][1]} (${y[0][0]} seconds)\n` +
+                `Rust+Wasm: fibonacci(${x}) == ${y[1][1]} (${y[1][0]} seconds)`
         );
     }
 };
