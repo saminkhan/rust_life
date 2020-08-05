@@ -9,9 +9,9 @@ window.js_fib = (n) => {
 };
 
 window.timer = async (func, n) => {
-    const t1 = new Date().getTime();
+    const t1 = performance.now();
     const result = await func(n);
-    return [((new Date().getTime() - t1) / 1000).toFixed(3), result];
+    return [(performance.now() - t1) / 1000.0, result];
 };
 
 let main_loop = async () => {
