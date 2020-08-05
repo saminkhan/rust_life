@@ -6,13 +6,7 @@ class ReactRoot extends React.Component {
         this.state = {
             loading: 0,
         };
-
-        this.crunch = this.crunch.bind(this);
     }
-
-    crunch = () => {
-        window.iter(window.DEFAULT);
-    };
 
     render() {
         return (
@@ -23,7 +17,7 @@ class ReactRoot extends React.Component {
                     id='btn-crunch'
                     className='btn btn-light fa fa-cogs'
                     title='First Rust!'
-                    onClick={this.crunch}
+                    onClick={() => {}}
                 />
                 <div
                     className={`loader loader-default ${

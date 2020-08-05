@@ -89,7 +89,7 @@ module.exports = {
             filename: '[name].[contentHash].css',
         }),
         new HtmlWebpackPlugin({
-            title: 'FirstRust',
+            title: 'RustLife',
             favicon: 'frontend/favicon.ico',
             meta: {
                 charset: 'utf-8',

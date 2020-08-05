@@ -1,5 +1,5 @@
 {
-    "name": "first_rust",
+    "name": "rust_life",
     "version": "1.0.0",
     "description": "",
     "main": "frontend/index.js",
@@ -19,15 +19,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/saminkhan/first_rust.git"
+        "url": "git+https://github.com/saminkhan/rust_life.git"
     },
     "author": "Samin Khan",
     "license": "MIT",
     "private": true,
     "bugs": {
-        "url": "https://github.com/saminkhan/first_rust/issues"
+        "url": "https://github.com/saminkhan/rust_life/issues"
     },
-    "homepage": "https://saminkhan.ca/first_rust",
+    "homepage": "https://saminkhan.ca/rust_life",
     "devDependencies": {
         "@babel/core": "^7.8.7",
         "@babel/plugin-proposal-class-properties": "^7.8.3",

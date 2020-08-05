@@ -1,5 +1,5 @@
 [package]
-name = "first_rust"
+name = "rust_life"
 version = "0.1.0"
 authors = ["Samin Khan <samin9119@gmail.com>"]
 edition = "2018"

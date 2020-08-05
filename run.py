@@ -23,7 +23,7 @@ from threading import Timer
 from time import sleep
 from waitress import serve
 
-APP_NAME = 'FirstRust'
+APP_NAME = 'RustLife'
 DELAY = 0.1
 logger = logging.getLogger(__name__)
 mimetypes.add_type('application/wasm', '.wasm')
